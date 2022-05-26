@@ -39,15 +39,15 @@ if ($conn->connect_error){
 	<table width="45%" border="2" align="center" cellpadding="5" cellspacing="5">
 	<tr>
 	<td width="20%" align="center">Name of Caller:</td>
-	<td width="50%"><input type="text" name="callerName" id="callerName"></td>
+	<td width="50%"><input type="text" pattern="[a-zA-z][a-zA-Z\s]*" name="callerName" id="callerName" required> </td>
 	</tr>
 	<tr>
 	<td width="20%" align="center">Contact Number:</td>
-	<td width="50%"><input type="text" name="contactNo" id="contactNo"></td>
+	<td width="50%"><input type="text" pattern="[6,8,9]{1}[0-9]{7}" placeholder="onlynumbers" maxlength="8" name="contactNo" id="contactNo" title="Please enter an 8 digit phone number" required></td>
 	</tr>
 	<tr>
 	<td width="50%" align="center">Location:</td>
-	<td width="50%"><input type="text" name="location" id="location"></td>
+	<td width="50%"><input type="text" name="location" id="location" required></td>
 	</tr>
 	<tr>
 	<td width="50%" align="center">Incident Type:</td>
@@ -63,7 +63,7 @@ if ($conn->connect_error){
 	</tr>
 	<tr>
 	<td width="50%"	align="center">Description:</td>
-	<td width="50%"><textarea name="incidentDesc" id="incidentDesc" cols="45 rows="5"></textarea></td>
+	<td width="50%"><textarea name="incidentDesc" id="incidentDesc" cols="45" rows="5" required></textarea></td>
 	</tr>
 	<tr>
 	<table width="40%" border="0" align="center" cellpadding="5" cellspacing="5">
